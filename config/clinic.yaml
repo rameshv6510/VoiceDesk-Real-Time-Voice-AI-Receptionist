@@ -1,0 +1,69 @@
+﻿clinic:
+  name: "SmileCare Dental Clinic"
+  tagline: "Your friendly neighborhood dental practice"
+  phone: "+91-9876543210"
+  emergency_phone: "+91-9876599999"
+  address: "102, Indiranagar 100ft Road, Bengaluru, Karnataka 560038"
+  working_hours:
+    monday: { open: "09:00", close: "18:00" }
+    tuesday: { open: "09:00", close: "18:00" }
+    wednesday: { open: "09:00", close: "18:00" }
+    thursday: { open: "09:00", close: "18:00" }
+    friday: { open: "09:00", close: "18:00" }
+    saturday: { open: "09:00", close: "14:00" }
+    sunday: { closed: true }
+  holidays:
+    - "2026-10-20"
+    - "2026-11-01"
+
+doctors:
+  - id: "dr_ananya"
+    name: "Dr. Ananya Rao"
+    specialization: "General & Cosmetic Dentistry"
+  - id: "dr_vikram"
+    name: "Dr. Vikram Hegde"
+    specialization: "Orthodontics & Implants"
+
+services:
+  - id: "general_checkup"
+    name: "Dental Consultation & Checkup"
+    duration_minutes: 20
+    price_inr: 500
+    doctor_id: "dr_ananya"
+  - id: "cleaning"
+    name: "Teeth Cleaning and Polishing"
+    duration_minutes: 30
+    price_inr: 1200
+    doctor_id: "dr_ananya"
+  - id: "root_canal_consult"
+    name: "Root Canal Consultation"
+    duration_minutes: 40
+    price_inr: 800
+    doctor_id: "dr_vikram"
+
+languages:
+  supported:
+    - code: "en"
+      name: "English"
+    - code: "hi"
+      name: "Hindi"
+    - code: "kn"
+      name: "Kannada"
+  default: "en"
+
+faqs:
+  - question: "Where is the clinic located?"
+    answer: "We are located at 102, Indiranagar 100ft Road, Bengaluru, Karnataka, near the metro station."
+  - question: "Is parking available?"
+    answer: "Yes, dedicated 2-wheeler and 4-wheeler valet parking is available on site."
+  - question: "Do you accept insurance or cashless claims?"
+    answer: "We accept major dental insurance networks and offer zero-cost EMI options on major treatments."
+
+emergency_keywords:
+  - "severe bleeding"
+  - "unbearable pain"
+  - "breathing difficulty"
+  - "chest pain"
+  - "trauma"
+  - "knocked out tooth"
+  - "emergency"

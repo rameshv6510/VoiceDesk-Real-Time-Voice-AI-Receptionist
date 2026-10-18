@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width="device-width, initial-scale="1.0">
+    <title>VoiceDesk • Clinic Voice Receptionist</title>
+    <link rel="stylesheet" href="/static/client/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>🦷 VoiceDesk</h1>
+            <p class="subtitle">AI Voice Receptionist for Small Clinics (Real-time Voice • Booking • RAG • Guardrails)</p>
+        </header>
+
+        <main class="card">
+            <div class="clinic-info">
+                <h3 id="clinic-name">SmileCare Dental Clinic</h3>
+                <p id="clinic-status">🟢 Ready for call testing</p>
+            </div>
+
+            <div class="voice-visualizer" id="visualizer">
+                <div class="pulse-ring"></div>
+                <div class="agent-avatar">🩺</div>
+            </div>
+
+            <div class="status-indicator" id="connection-status">
+                <span class="status-dot"></span>
+                <span id="status-text">Idle (Ready to Connect)</span>
+            </div>
+
+            <div class="controls">
+                <button id="start-btn" class="btn btn-primary">📞 Start Call</button>
+                <button id="hangup-btn" class="btn btn-danger" disabled>⏹️ Hang Up</button>
+            </div>
+
+            <div class="metrics-panel">
+                <div class="metric-card">
+                    <span class="metric-label">Turn-to-Turn Latency</span>
+                    <span class="metric-value" id="latency-val">-- ms</span>
+                </div>
+                <div class="metric-card">
+                    <span class="metric-label">Turns Completed</span>
+                    <span class="metric-value" id="turns-val">0</span>
+                </div>
+            </div>
+
+            <div class="transcript-box">
+                <h4>Live Conversation</h4>
+                <div class="messages" id="messages">
+                    <div class="system-msg">Click "Start Call" to connect your microphone and talk to VoiceDesk.</div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <audio id="remote-audio" autoplay playsinline style="display:none;"></audio>
+    <script src="/static/client/app.js"></script>
+</body>
+</html>

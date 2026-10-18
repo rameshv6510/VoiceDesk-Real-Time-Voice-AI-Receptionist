@@ -1,0 +1,45 @@
+# Virtual Environments
+.venv/
+venv/
+env/
+ENV/
+
+# Byte-compiled / optimized files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Secrets & Environment variables (CRITICAL)
+.env
+*.env
+!.env.example
+
+# Local Databases & Chroma Vector Data
+voice_desk.db
+*.db
+*.sqlite
+*.sqlite3
+chroma_data/
+
+# Testing & Caches
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Logs & Temp files
+*.log
+scratch/
+
+# Audio artifacts
+*.mp3
+*.wav
+*.ogg
+*.m4a
+test_kn_speech.mp3
+
+# IDE & Editor files
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
